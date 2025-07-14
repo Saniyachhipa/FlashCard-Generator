@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+// html, body {
+//     font-family: "Quicksand", sans-serif;
+//     height: 100%;
+//     background: linear-gradient(to left, #74ebd5, #ecb77f);
+ 
+
+// }
+ body.dark-mode {
+  background: linear-gradient(to left, #0f2027, #203a43, #2c5364); /* Dark gradient */
+  color: white;
+}
+
+body:not(.dark-mode) {
+  background: linear-gradient(to left, #74ebd5, #ecb77f); /* Light gradient */
+  color: black;
+}
+
+
+button,
+input,
+textarea,
+select {
+    font-family: "Quicksand", sans-serif;
+}
+
+input::placeholder,
+textarea::placeholder {
+    font-family: "Quicksand", sans-serif;
+}
+
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+    font-family: "Quicksand", sans-serif;
+}
+
+.App {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+  
+
+
+
+
+ 
