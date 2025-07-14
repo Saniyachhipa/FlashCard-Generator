@@ -11,7 +11,7 @@ function LandingPage() {
     return (
         <div className='landing__container'>
             <header className='landing__header'>
-                <h1 className='landing__title'>AI-Powered Flashcards Made Easy</h1>
+                <h1 className='landing__title'>AI-Powered Flashcards Made Easy by Saniya</h1>
                 <p className='landing__subtitle'>
                 Create customized flashcards instantly—powered by AI.
                 </p>
