@@ -89,31 +89,23 @@ import FeatureCards from './FeatureCards';
 import Footer from './Footer';
 
 function LandingPage() {
-  return (
-    <div  >
-      <HeroSection />
-      {/* <div style={{ width: '100%', height: '600px', position: 'relative' }}>
-  <HeroSection />
-</div> */}
+    const navigate = useNavigate();
 
- 
-<div style={{ width: '100%', height: '600px', position: 'relative' }}>
-  <HeroSection
-    mouseRepulsion={true}
-    mouseInteraction={true}
-    density={1.5}
-    glowIntensity={0.5}
-    saturation={0.8}
-    hueShift={240}
-    
-    
-  />
-</div>
+    const handleStart = () => {
+        navigate('/flashcard-generator');
+    };
 
-      <FeatureCards />
-      <Footer />
-    </div>
-  );
+    return (
+        <div className='landing__container'>
+            <header className='landing__header'>
+                <h1 className='landing__title'>AI-Powered Flashcards Made Easy</h1>
+                <p className='landing__subtitle'>
+                Create customized flashcards instantly—powered by AI.
+                </p>
+                <button className='landing__cta' onClick={handleStart}>Get Started</button>
+            </header>
+        </div>
+    );
 }
 
 export default LandingPage;
