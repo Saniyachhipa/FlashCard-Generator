@@ -8,6 +8,7 @@
         width: 100vw;
         height: 100vh;
         // background: linear-gradient(90deg, #74ebd5 0%, #7FABEC 100%);
+        // background : linear-gradient(to left, #0f2027, #203a43, #2c5364);
         background-size: 400% 400%;
         animation: bg_gradient_animation 30s ease-in-out infinite;
         
@@ -66,6 +67,32 @@
   
 
 
+
+.landing {
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background :(to left, #0f2027, #203a43, #2c5364);
+
+    // background: linear-gradient(90deg, #74ebd5 0%, #7FABEC 100%);
+    background-size: 400% 400%;
+    animation: bg_gradient_animation 30s ease-in-out infinite;
+  }
+}
+ body.dark-mode {
+  .landing__header {
+    color: #fff;
+    
+      
+  }
+   
+}
+.body,#root{
+    background :(to left, #0f2027, #203a43, #2c5364);
+}
 
 
 

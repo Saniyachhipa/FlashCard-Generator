@@ -1,185 +1,580 @@
-#flashcard-generator__container {
-    width: 100%;
-    min-height: 100vh;               // allows it to grow if needed
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: auto; // allows outer scrollbars if screen is too small
-    padding: 20px; // some padding so it's not touching screen edges
-  }
+// #flashcard-generator__container {
+//     width: 100%;
+//     min-height: 100vh;               // allows it to grow if needed
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     overflow: auto; // allows outer scrollbars if screen is too small
+//     padding: 20px; // some padding so it's not touching screen edges
+//   }
   
   
  
 
 
-  .flashcard-generator {
-    width: 100%;
-    max-width: 600px;
-    display: flex;
-    flex-direction: column;
-    background-color: #ffffff;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-    border-radius: 10px;
-    padding: 20px;
-     margin-bottom: 20px;
+//   .flashcard-generator {
+//     width: 100%;
+//     max-width: 600px;
+//     display: flex;
+//     flex-direction: column;
+//     background-color: #ffffff;
+//     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+//     border-radius: 10px;
+//     padding: 20px;
+//      margin-bottom: 20px;
       
 
-    &__title {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-      color: #333;
-      font-weight: 500;
-      text-align: center;
-    }
+//     &__title {
+//       font-size: 2.5rem;
+//       margin-bottom: 1rem;
+//       color: #333;
+//       font-weight: 500;
+//       text-align: center;
+//     }
    
 
 
-    &__form-display-container {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
+//     &__form-display-container {
+//       display: flex;
+//       flex-direction: column;
+//       gap: 1rem;
+//     }
+
+//     &__form {
+//       display: flex;
+//       flex-direction: column;
+//       gap: 50px;
+//     }
+
+//     &__label {
+//       // font-size: 0.9rem;
+//       font-size: large;
+//       color: #1a1818;
+//       font-weight: 500;
+//       text-align: left;
+//       margin: 0.5rem 0 3px;
+//     }
+
+//     &__input,
+//     &__file-input {
+//       padding: 0.8rem;
+//       font-size: 0.9rem;
+//       border: 1px solid #ccc;
+//       border-radius: 5px;
+//       width: 100%;
+//     }
+
+//     &__file-input::file-selector-button,
+//     &__file-input::-webkit-file-upload-button {
+//       font-size: 12px;
+//       background-color: white;
+//       border: 1px solid black;
+//       padding: 8px 16px;
+//       border-radius: 4px;
+//       cursor: pointer;
+//       margin-right: 20px;
+//     }
+
+//     &__error {
+//       color: red;
+//       font-size: 0.9rem;
+//       font-weight: bold;
+//       text-align: center;
+//       margin-top: 5px;
+//       display: block;
+//     }
+
+//     &__btn-container {
+//       display: flex;
+//       justify-content: space-between;
+//       gap: 10px;
+//       margin-top: 1rem;
+//     }
+
+//     &__btn--generate, &__btn--reset {
+//       flex: 1;
+//       padding: 0.8rem;
+//       font-size: 1rem;
+//       font-weight: bold;
+//       border-radius: 5px;
+//       cursor: pointer;
+//       transition: all 0.3s ease;
+
+//       &:disabled {
+//         background-color: #ccc;
+//         cursor: not-allowed;
+//       }
+//     }
+
+//     &__btn--generate {
+//       background-color: hsl(9, 100%, 70%);
+//       color: white;
+//       border: none;
+
+//       &:hover {
+//         background-color: hsl(9, 100%, 65%);
+//         transform: scale(1.03);
+//       }
+//     }
+
+//     &__btn--reset {
+//       background-color: #fff;
+//       color: hsl(9, 100%, 70%);
+//       border: 1px solid hsl(9, 100%, 70%);
+
+//       &:hover {
+//         transform: scale(1.03);
+//       }
+//     }
+
+//     &__display {
+//       width: 100%;
+//       margin-top: 1rem;
+//       display: flex;
+//       flex-direction: column;
+//       justify-content: center;
+//       align-items: stretch;
+//     }
+
+//     &__flashcard-container {
+//       width: 100%;
+//       display: flex;
+//       flex-direction: column;
+//       justify-content: center;
+//       align-items: center;
+//     }
+
+//     &__nav {
+//       display: flex;
+//       justify-content: center;
+//       align-items: center;
+//       gap: 1rem;
+//       margin-top: 15px;
+//     }
+
+//     &__nav-btn {
+//       padding: 0.5rem 1rem;
+//       font-size: 0.9rem;
+//       border: none;
+//       border-radius: 5px;
+//       cursor: pointer;
+//       background-color: hsl(195, 41%, 44%);
+//       color: #fff;
+//       transition: background-color 0.3s ease;
+
+//       &:hover {
+//         background-color: hsl(195, 41%, 38%);
+//       }
+
+//       &:disabled {
+//         background-color: #ccc;
+//         cursor: not-allowed;
+//       }
+//     }
+
+//     &__nav-count {
+//       font-size: 1rem;
+//       color: #333;
+//       font-weight: 500;
+//     }
+//   }
+
+
+
+
+   
+#flashcard-generator__container {
+  width: 100%;
+  min-height: 100vh; // allows it to grow if needed
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: auto; // allows outer scrollbars if screen is too small
+  padding: 20px; // some padding so it's not touching screen edges
+}
+
+.flashcard-generator {
+  width: 100%;
+  max-width: 1200px;
+  max-height: 1290px;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+
+
+.flashcard-generator{
+  &__title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #333;
+    font-weight: 500;
+    text-align: center;
+     animation: zoomOut 0.9s ease-out;
+  }
+  @keyframes zoomOut {
+  0% {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}}
+
+
+  &__form-display-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  &__label {
+    font-size: 1.5rem;
+    
+    color: #1a1818;
+    font-weight: 500;
+    text-align: left;
+    margin: 0.5rem 0 3px;
+  }
+
+  &__input,
+  &__file-input {
+    margin-top: 1%;
+    margin-right: 1%;
+    padding: 1rem;
+    font-size: 0.9rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    
+    color:black;
+     
+  }
+
+  &__file-input::file-selector-button,
+  &__file-input::-webkit-file-upload-button {
+    font-size: 12px;
+    background-color: white;
+    
+    border: 1px solid black;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 20px;
+  }
+
+  &__error {
+    color: red;
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 5px;
+    display: block;
+  }
+
+  &__btn-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 1rem;
+  }
+
+  &__btn--generate,
+  &__btn--reset {
+    flex: 1;
+    padding: 0.8rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+    }
+  }
+
+  &__btn--generate {
+    background-color: hsl(9, 100%, 70%);
+    color: white;
+    border: none;
+
+    &:hover {
+      background-color: hsl(9, 100%, 65%);
+      transform: scale(1.03);
+    }
+  }
+
+ 
+
+  &__display {
+    width: 100%;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+  }
+
+  &__flashcard-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 15px;
+  }
+
+  &__nav-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: hsl(195, 41%, 44%);
+    color: #fff;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: hsl(195, 41%, 38%);
     }
 
-    &__form {
-      display: flex;
-      flex-direction: column;
-      gap: 50px;
+    &:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
     }
+  }
+
+  &__nav-count {
+    font-size: 1rem;
+    color: #333;
+    font-weight: 500;
+  }
+}
+.flashcard-generator__nav {
+  color: #111;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ .body dark-mode {
+  .flashcard-generator {
+  //  background: linear-gradient(to left, #6a8ca3, #7ea2b6, #95b9cb);
+     background-color: black;
+ // dark background
+    color: #f5f5f5;  // light text
+    
+    &__title{
+      color: #fff;
+    }
+    
+              
+      &__btn--generate {
+    background-color:    #2c2c2c;
+    color: white;
+    border: none; }
+   
+
+
+  .flashcard-generator__btn--reset{
+    border: white;
+    color: white;
+    background-color: #2c2c2c;
+  }
+
+    
 
     &__label {
-      // font-size: 0.9rem;
-      font-size: large;
-      color: #1a1818;
-      font-weight: 500;
-      text-align: left;
-      margin: 0.5rem 0 3px;
+      color: #e0e0e0;
     }
 
     &__input,
     &__file-input {
-      padding: 0.8rem;
-      font-size: 0.9rem;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      width: 100%;
+      background-color: #2c2c2c;
+      color: white;
+      border-color: #555;
+       margin-top:  5px;
     }
+    
 
     &__file-input::file-selector-button,
     &__file-input::-webkit-file-upload-button {
-      font-size: 12px;
-      background-color: white;
-      border: 1px solid black;
-      padding: 8px 16px;
-      border-radius: 4px;
-      cursor: pointer;
-      margin-right: 20px;
-    }
-
-    &__error {
-      color: red;
-      font-size: 0.9rem;
-      font-weight: bold;
-      text-align: center;
-      margin-top: 5px;
-      display: block;
-    }
-
-    &__btn-container {
-      display: flex;
-      justify-content: space-between;
-      gap: 10px;
-      margin-top: 1rem;
-    }
-
-    &__btn--generate, &__btn--reset {
-      flex: 1;
-      padding: 0.8rem;
-      font-size: 1rem;
-      font-weight: bold;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-
-      &:disabled {
-        background-color: #ccc;
-        cursor: not-allowed;
-      }
-    }
-
-    &__btn--generate {
-      background-color: hsl(9, 100%, 70%);
-      color: white;
-      border: none;
-
-      &:hover {
-        background-color: hsl(9, 100%, 65%);
-        transform: scale(1.03);
-      }
+      background-color: #333;
+      color: #f5f5f5;
+      border: 1px solid #777;
+      font-size:  large;
+      
     }
 
     &__btn--reset {
-      background-color: #fff;
+      background-color: transparent;
       color: hsl(9, 100%, 70%);
-      border: 1px solid hsl(9, 100%, 70%);
-
-      &:hover {
-        transform: scale(1.03);
-      }
-    }
-
-    &__display {
-      width: 100%;
-      margin-top: 1rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: stretch;
-    }
-
-    &__flashcard-container {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-
-    &__nav {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 1rem;
-      margin-top: 15px;
-    }
-
-    &__nav-btn {
-      padding: 0.5rem 1rem;
-      font-size: 0.9rem;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      background-color: hsl(195, 41%, 44%);
-      color: #fff;
-      transition: background-color 0.3s ease;
-
-      &:hover {
-        background-color: hsl(195, 41%, 38%);
-      }
-
-      &:disabled {
-        background-color: #ccc;
-        cursor: not-allowed;
-      }
+      border-color: hsl(9, 100%, 70%);
     }
 
     &__nav-count {
-      font-size: 1rem;
-      color: #333;
-      font-weight: 500;
+      color: #0e0d0d;
     }
   }
+}
 
 
 
 
-   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.summary-section {
+  margin-top: 400px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: transparent; /* Removes white background */
+}
+
+.summary-section h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
+}
+
+.summary-card {
+  margin-bottom: 20px;
+  padding: 16px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background-color: #fffdf7; /* Light yellow for contrast */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.summary-card h3 {
+  font-size: 18px;
+  color: #111;
+  margin-bottom: 8px;
+}
+
+.summary-card p {
+  margin: 0;
+  font-size: 16px;
+  color: #444;
+}
+
+          
+
+
+
+
+
+
+
+
+.show-summary-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-weight: bold;
+  background-color: hsl(9, 100%, 70%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.summary-section {
+  margin-top: 30px;
+  padding: 15px;
+  background: #8a2828;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+
+.summary-card {
+  margin-bottom: 200px;
+}
+
+.show-summary-btn,
+.hide-summary-btn {
+  padding: 12px 24px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  margin-top: 100px;
+  margin-bottom:100px;
+}
+
+.show-summary-btn:hover,
+.hide-summary-btn:hover {
+  background-color: #0056b3;
+}
+
+.summary-section {
+  margin-top: 200px;
+  margin-bottom: 700px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+}
+
+.summary-card {
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}

@@ -1,0 +1,25 @@
+.quiz__container {
+  max-width: 700px;
+  margin: auto;
+  padding: 2rem;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+}
+
+.quiz__question {
+  margin-bottom: 1.5rem;
+}
+
+.quiz__question p {
+  font-weight: bold;
+  color: #333;
+}
+
+.quiz__question ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.quiz__question li {
+  margin-top: 0.5rem;
+}
